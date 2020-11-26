@@ -1,1 +1,0 @@
-package JavaLabs.pumnya08;
