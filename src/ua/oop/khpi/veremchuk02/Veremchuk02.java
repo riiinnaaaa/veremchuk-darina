@@ -1,6 +1,7 @@
 package ua.oop.khpi.veremchuk02;
-import java.util.Random; 
-public class Main {
+import java.util.Random;
+
+public class Veremchuk02 {
 	/**
 	    * An entry point - main method.
 	    *
@@ -9,21 +10,18 @@ public class Main {
 public static void main(String[] args)
 {
    Random rand = new Random();
-        
-       
-         
-         System.out.println("--------------------------------------------------");
-         System.out.println("|\tNumber\t |"+"\t"+"prime or not prime number|");
-         System.out.println("--------------------------------------------------");
-         
-         for (int i = 0; i < 10; i++)
-         { 
-          int number = rand.nextInt(100);
-          IsPrimeNumber(number);
-          printNumber(IsPrimeNumber(number),number);
-         }    
-        
-         System.out.println("--------------------------------------------------");
+   System.out.println("--------------------------------------------------");
+   System.out.println("|\tNumber\t |"+"\t"+"prime or not prime number|");
+   System.out.println("--------------------------------------------------");
+
+   for (int i = 0; i < 10; i++)
+   {
+    int number = rand.nextInt(100);
+    IsPrimeNumber(number);
+    printNumber(IsPrimeNumber(number),number);
+   }
+
+   System.out.println("--------------------------------------------------");
 }
 /**
  * A method that check a number. Is it Prime Number or Not!
@@ -31,12 +29,10 @@ public static void main(String[] args)
  * @param value - the number that we checking for a simple 
  * @return 		- TRUE - if prime, FALSE - if not prime
  */
-  public static boolean IsPrimeNumber(int value){
-  
-	  if(value==1){
-		  
-    return false;
-   }
+    public static boolean IsPrimeNumber(int value) {
+	  if(value==1) {
+            return false;
+	  }
      
          for (int i = 2; i < value; i++){
         	 

@@ -1,7 +1,6 @@
 package ua.oop.khpi.veremchuk05;
 import ua.oop.khpi.veremchuk05.MyContainer.MyIterator;
 import ua.oop.khpi.veremchuk03.Helper;
-import org.w3c.dom.ls.LSOutput;
 
 public class Veremchuk05 {
 	

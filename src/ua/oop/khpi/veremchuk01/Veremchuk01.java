@@ -1,6 +1,6 @@
 package ua.oop.khpi.veremchuk01;
 
-public class Main {
+public class Veremchuk01 {
 	/**
     * An entry point - main method.
     *

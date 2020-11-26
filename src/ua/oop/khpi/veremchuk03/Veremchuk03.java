@@ -2,7 +2,7 @@ package ua.oop.khpi.veremchuk03;
 import java.util.Scanner;
 
 
-public class Main {
+public class Veremchuk03 {
 	/**
 	* An entry point - main method.
 	*

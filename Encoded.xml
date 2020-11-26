@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="14.0.2" class="java.beans.XMLDecoder">
+ <array class="ua.oop.khpi.veremchuk07.BuyersGuide" length="2">
+  <void index="0">
+   <object class="ua.oop.khpi.veremchuk07.BuyersGuide" id="BuyersGuide0">
+    <void property="address">
+     <string>г. Харьков, ул. Пушкинская 111</string>
+    </void>
+    <void property="name">
+     <string>Ева</string>
+    </void>
+    <void property="numbers">
+     <void method="add">
+      <string>+380992812637</string>
+     </void>
+     <void method="add">
+      <string>+380281738399</string>
+     </void>
+    </void>
+    <void property="specialization">
+     <string>Магазин товаров для красоты и ухода</string>
+    </void>
+    <void property="workTime">
+     <string>ПН - ПТ: 08:00 - 20:00</string>
+    </void>
+   </object>
+  </void>
+  <void index="1">
+   <object class="ua.oop.khpi.veremchuk07.BuyersGuide" id="BuyersGuide1">
+    <void property="address">
+     <string>г. Харьков, ул. Пушкинская 222</string>
+    </void>
+    <void property="name">
+     <string>АТБ</string>
+    </void>
+    <void property="numbers">
+     <void method="add">
+      <string>+380973746473</string>
+     </void>
+    </void>
+    <void property="specialization">
+     <string>Продуктовый магазин</string>
+    </void>
+    <void property="workTime">
+     <string>ПН - ВС: 00:00 - 24:00</string>
+    </void>
+   </object>
+  </void>
+ </array>
+</java>

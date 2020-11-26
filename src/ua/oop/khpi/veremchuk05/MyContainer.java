@@ -1,9 +1,8 @@
 package ua.oop.khpi.veremchuk05;
 
-import java.util.ArrayList;
+import java.io.Serializable;
 import java.util.Arrays;
 import java.util.Iterator;
-import java.util.List;
 import java.util.NoSuchElementException;
 
 /**
@@ -13,9 +12,11 @@ import java.util.NoSuchElementException;
  *
  * @author Veremchuk Darina
  */
-public class MyContainer implements Iterable<String> {
+public class MyContainer implements Iterable<String>, Serializable {
+
+    private static final long serialVersionUID = -6090679935326141955L;
     /** Holds the elements of a container. */
-    private String[] buffer = null;
+    protected String[] buffer = null;
     /**
      * Method concatenates all container elements into a string.
      * @return container in a string
@@ -215,5 +216,10 @@ public class MyContainer implements Iterable<String> {
             }
             higherBound--;
         }
+    }
+
+    public String last()
+    {
+        return buffer[buffer.length-1];
     }
 }
