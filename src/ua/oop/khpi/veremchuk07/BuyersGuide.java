@@ -17,9 +17,9 @@ public class BuyersGuide implements Serializable {
 	/** Keep the specialization of store */
 	private String specialization;
 	/** Keep a work time  of store */
-	private String workTime;
+	private HashMap<String,String> workTime;
 
-	public BuyersGuide(String name, String address, String spec, String WT, String... nums) {
+	public BuyersGuide(String name, String address, String spec, HashMap<String, String> WT, String... nums) {
 		this.name = name;
 		this.address = address;
 		this.numbers = new ArrayList<>(nums.length);
@@ -69,18 +69,17 @@ public class BuyersGuide implements Serializable {
 		this.specialization = specialization;
 	}
 
-	public String getWorkTime() {
+	public HashMap<String, String> getWorkTime() {
 		return this.workTime;
 	}
 
-	public void setWorkTime(String workTime) {
+	public void setWorkTime(HashMap<String, String> workTime) {
 		this.workTime = workTime;
 	}
 
 	/**
 	 * Load a numbers of stores.
 	 * @param CountNumbers - count of numbers
-	 * @return список участников
 	 * @throws IOException - при
 	 * некорректном считывании
 	 */
@@ -100,6 +99,7 @@ public class BuyersGuide implements Serializable {
 
 	public static BuyersGuide generate () throws IOException {
 		Scanner in = new Scanner(System.in);
+		Scanner in2 = new Scanner(System.in);
 		BuyersGuide TestStore = new BuyersGuide();
 		System.out.print("Введите название торговой точки: ");
 		TestStore.setName(in.nextLine());
@@ -111,9 +111,21 @@ public class BuyersGuide implements Serializable {
 		TestStore.fillNumbers(amount);
 		System.out.print("Введите специализацию торговой точки: ");
 		TestStore.setSpecialization(in.nextLine());
-		System.out.print("Введите время работы торговой точки (День недели - время): ");
-		TestStore.setWorkTime(in.nextLine());
 
+		System.out.print("Введите кол-во рабочих дней: ");
+		int countOfWorkDays = in.nextInt();
+		TestStore.workTime = new HashMap<>();
+		String workingDayName;
+		String workingTime;
+		for (int i = 0; i < countOfWorkDays ; i++) {
+			System.out.println("Рабочий день №: "+ (i+1));
+			System.out.print("Введите день: ");
+			workingDayName = in2.nextLine();
+			System.out.print("Введите время работы: ");
+			workingTime = in2.nextLine();
+			TestStore.workTime.put(workingDayName, workingTime);
+			System.out.println();
+		}
 		return TestStore;
 	}
 
@@ -134,10 +146,13 @@ public class BuyersGuide implements Serializable {
 		} else {
 			builder.append("null");
 		}
-		builder.append("\nСпециализация: ").append(
-				this.getSpecialization()).append("\n");
-		builder.append("Время работы (график): ").append(
-				this.getWorkTime()).append("\n");
-		return builder.append("\n").toString();
+		builder.append("\nСпециализация: ").append(this.getSpecialization()).append("\n");
+		builder.append("Время работы (график):\n");
+		Set<String> keys = workTime.keySet();
+		for(String key : keys) {
+			builder.append("День: ").append(key).append("\n");
+			builder.append("Рабочее время: ").append(workTime.get(key)).append("\n\n");
+		}
+		return builder.toString();
 	}
 }

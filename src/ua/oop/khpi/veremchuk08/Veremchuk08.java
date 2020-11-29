@@ -6,16 +6,18 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Veremchuk08 {
-    private Veremchuk08(){}
+    static BuyersGuide [] stores = new BuyersGuide[0];
+    static String choice = "";
+    static Scanner in = new Scanner(System.in);
+
     /**
      * An entry point, the main method
      *
      * @param args - arguments
      */
+
     public static void main(String[] args) throws IOException {
-        BuyersGuide [] stores = new BuyersGuide[0];
-        Scanner in = new Scanner(System.in);
-        String choice;
+        stores = new BuyersGuide[0];
         do {
             UI.mainMenu();
             choice = UI.getChoice();
@@ -34,7 +36,7 @@ public class Veremchuk08 {
                     System.out.println();
                     break;
                 case "4":
-                    UI.saveToFile(stores);
+                    UI.saveToFile();
                     break;
                 case "5":
                     try {
@@ -48,8 +50,7 @@ public class Veremchuk08 {
                     System.out.println("Выход...");
                     break;
                 default:
-                    System.out.println("Введите номер"
-                            + " одного из пунктов!\n");
+                    System.out.println("Введите номер одного из пунктов!\n");
             }
         } while (!choice.equals("0"));
     }

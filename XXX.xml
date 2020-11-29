@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="14.0.2" class="java.beans.XMLDecoder">
+ <array class="ua.oop.khpi.veremchuk07.BuyersGuide" length="1">
+  <void index="0">
+   <object class="ua.oop.khpi.veremchuk07.BuyersGuide" id="BuyersGuide0">
+    <void property="address">
+     <string>12315</string>
+    </void>
+    <void property="name">
+     <string>313125</string>
+    </void>
+    <void property="numbers">
+     <void method="add">
+      <string>553246</string>
+     </void>
+     <void method="add">
+      <string>2645757</string>
+     </void>
+    </void>
+    <void property="specialization">
+     <string>2</string>
+    </void>
+    <void property="workTime">
+     <object class="java.util.HashMap">
+      <void method="put">
+       <string>234236</string>
+       <string>23462346457</string>
+      </void>
+      <void method="put">
+       <string>346457</string>
+       <string>2536457</string>
+      </void>
+     </object>
+    </void>
+   </object>
+  </void>
+ </array>
+</java>
